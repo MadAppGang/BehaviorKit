@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  BheaviorKitDemo
+
+  Created by Ievgen Rudenko on 09/07/15.
+  Copyright (c) 2015 MadAppGang. All rights reserved.
+*/
+
+
+"MAGImagePickerBehaviour_CancelButtonTitle" = "Отмена";
+"MAGImagePickerBehaviour_PhotoSourceButtonTitle" = "Фотоальбом";
+"MAGImagePickerBehaviour_CameraSourceButtonTitle" = "Камера";
+"MAGImagePickerBehaviour_SavedPhotosAlbumSourceButtonTitle" = "Сохраненные фото";
