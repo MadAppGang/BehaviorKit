@@ -15,12 +15,17 @@
 		BD3429701B44E96300C28FA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD34296E1B44E96300C28FA6 /* Main.storyboard */; };
 		BD3429721B44E96300C28FA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD3429711B44E96300C28FA6 /* Images.xcassets */; };
 		BD3429751B44E96300C28FA6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD3429731B44E96300C28FA6 /* LaunchScreen.xib */; };
-		BD3429811B44E96300C28FA6 /* BheaviorKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3429801B44E96300C28FA6 /* BheaviorKitDemoTests.swift */; };
 		BD51B87A1B454154008309C3 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51B8791B454154008309C3 /* Behavior.swift */; };
+		BD5892CC1B4ECBD90079A69F /* ManualImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5892CB1B4ECBD90079A69F /* ManualImagePickerViewController.swift */; };
+		BD77F4431B58D2BA00C609CD /* KeybardScrollBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F4421B58D2BA00C609CD /* KeybardScrollBehavior.swift */; };
+		BD77F4581B58D77900C609CD /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F4571B58D77900C609CD /* XCTestCase.swift */; };
+		BD77F45A1B58D79D00C609CD /* ImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F4591B58D79D00C609CD /* ImagePickerTests.swift */; };
+		BD77F45D1B58E96800C609CD /* KIFUITestActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F45C1B58E96800C609CD /* KIFUITestActor.swift */; };
+		E6B21A8D107FF0238853D81F /* libPods-UI Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A973E2160FA8DA267A03CFC6 /* libPods-UI Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BD34297B1B44E96300C28FA6 /* PBXContainerItemProxy */ = {
+		BD77F44E1B58D33C00C609CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BD34295B1B44E96200C28FA6 /* Project object */;
 			proxyType = 1;
@@ -30,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0348AD34322E735D9723E36E /* Pods-UI Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UI Tests/Pods-UI Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		36A930E83E1B335AA8930F5D /* Pods-UI Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UI Tests/Pods-UI Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A973E2160FA8DA267A03CFC6 /* libPods-UI Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UI Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1CD48E1B4D6A94004B2050 /* ImagePickerBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePickerBehavior.swift; path = BehaviorKit/ImagePickerBehavior.swift; sourceTree = "<group>"; };
 		BD1CD4901B4D7FDE004B2050 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BD1CD4911B4D7FDE004B2050 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,10 +49,15 @@
 		BD34296A1B44E96300C28FA6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		BD34296C1B44E96300C28FA6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BD3429711B44E96300C28FA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BD34297A1B44E96300C28FA6 /* BheaviorKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BheaviorKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD34297F1B44E96300C28FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD3429801B44E96300C28FA6 /* BheaviorKitDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BheaviorKitDemoTests.swift; sourceTree = "<group>"; };
 		BD51B8791B454154008309C3 /* Behavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = BehaviorKit/Behavior.swift; sourceTree = "<group>"; };
+		BD5892CB1B4ECBD90079A69F /* ManualImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualImagePickerViewController.swift; sourceTree = "<group>"; };
+		BD77F4421B58D2BA00C609CD /* KeybardScrollBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeybardScrollBehavior.swift; path = BehaviorKit/Keyboard/KeybardScrollBehavior.swift; sourceTree = "<group>"; };
+		BD77F4481B58D33C00C609CD /* UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD77F44B1B58D33C00C609CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD77F4531B58D73300C609CD /* UI Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UI Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		BD77F4571B58D77900C609CD /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		BD77F4591B58D79D00C609CD /* ImagePickerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerTests.swift; sourceTree = "<group>"; };
+		BD77F45C1B58E96800C609CD /* KIFUITestActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KIFUITestActor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,22 +68,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD3429771B44E96300C28FA6 /* Frameworks */ = {
+		BD77F4451B58D33C00C609CD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6B21A8D107FF0238853D81F /* libPods-UI Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13B53EB2A9DF793740AA000D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0348AD34322E735D9723E36E /* Pods-UI Tests.debug.xcconfig */,
+				36A930E83E1B335AA8930F5D /* Pods-UI Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BD34295A1B44E96200C28FA6 = {
 			isa = PBXGroup;
 			children = (
 				BD3429651B44E96300C28FA6 /* BheaviorKitDemo */,
-				BD34297D1B44E96300C28FA6 /* BheaviorKitDemoTests */,
+				BD77F4491B58D33C00C609CD /* UI Tests */,
 				BD3429641B44E96300C28FA6 /* Products */,
+				13B53EB2A9DF793740AA000D /* Pods */,
+				FCDC35D5DA0608D3CC4833E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				BD3429631B44E96300C28FA6 /* BheaviorKitDemo.app */,
-				BD34297A1B44E96300C28FA6 /* BheaviorKitDemoTests.xctest */,
+				BD77F4481B58D33C00C609CD /* UI Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +119,7 @@
 				BD3429711B44E96300C28FA6 /* Images.xcassets */,
 				BD3429731B44E96300C28FA6 /* LaunchScreen.xib */,
 				BD3429661B44E96300C28FA6 /* Supporting Files */,
+				BD5892CB1B4ECBD90079A69F /* ManualImagePickerViewController.swift */,
 			);
 			path = BheaviorKitDemo;
 			sourceTree = "<group>";
@@ -107,30 +133,58 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BD34297D1B44E96300C28FA6 /* BheaviorKitDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				BD3429801B44E96300C28FA6 /* BheaviorKitDemoTests.swift */,
-				BD34297E1B44E96300C28FA6 /* Supporting Files */,
-			);
-			path = BheaviorKitDemoTests;
-			sourceTree = "<group>";
-		};
-		BD34297E1B44E96300C28FA6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BD34297F1B44E96300C28FA6 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		BD51B8761B454105008309C3 /* BehaviorKit */ = {
 			isa = PBXGroup;
 			children = (
+				BD77F4411B58D28400C609CD /* Keyboard */,
 				BD51B8791B454154008309C3 /* Behavior.swift */,
 				BD1CD48E1B4D6A94004B2050 /* ImagePickerBehavior.swift */,
 			);
 			name = BehaviorKit;
+			sourceTree = "<group>";
+		};
+		BD77F4411B58D28400C609CD /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BD77F4421B58D2BA00C609CD /* KeybardScrollBehavior.swift */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
+		BD77F4491B58D33C00C609CD /* UI Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BD77F45B1B58D7A400C609CD /* Tests */,
+				BD77F44A1B58D33C00C609CD /* Supporting Files */,
+				BD77F4531B58D73300C609CD /* UI Tests-Bridging-Header.h */,
+				BD77F4571B58D77900C609CD /* XCTestCase.swift */,
+				BD77F45C1B58E96800C609CD /* KIFUITestActor.swift */,
+			);
+			path = "UI Tests";
+			sourceTree = "<group>";
+		};
+		BD77F44A1B58D33C00C609CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD77F44B1B58D33C00C609CD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD77F45B1B58D7A400C609CD /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BD77F4591B58D79D00C609CD /* ImagePickerTests.swift */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		FCDC35D5DA0608D3CC4833E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A973E2160FA8DA267A03CFC6 /* libPods-UI Tests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,22 +207,24 @@
 			productReference = BD3429631B44E96300C28FA6 /* BheaviorKitDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BD3429791B44E96300C28FA6 /* BheaviorKitDemoTests */ = {
+		BD77F4471B58D33C00C609CD /* UI Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD3429871B44E96300C28FA6 /* Build configuration list for PBXNativeTarget "BheaviorKitDemoTests" */;
+			buildConfigurationList = BD77F4501B58D33C00C609CD /* Build configuration list for PBXNativeTarget "UI Tests" */;
 			buildPhases = (
-				BD3429761B44E96300C28FA6 /* Sources */,
-				BD3429771B44E96300C28FA6 /* Frameworks */,
-				BD3429781B44E96300C28FA6 /* Resources */,
+				F9472079E5958F68DA85B6EE /* Check Pods Manifest.lock */,
+				BD77F4441B58D33C00C609CD /* Sources */,
+				BD77F4451B58D33C00C609CD /* Frameworks */,
+				BD77F4461B58D33C00C609CD /* Resources */,
+				68447B1DEACDB1CD4857D26B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BD34297C1B44E96300C28FA6 /* PBXTargetDependency */,
+				BD77F44F1B58D33C00C609CD /* PBXTargetDependency */,
 			);
-			name = BheaviorKitDemoTests;
-			productName = BheaviorKitDemoTests;
-			productReference = BD34297A1B44E96300C28FA6 /* BheaviorKitDemoTests.xctest */;
+			name = "UI Tests";
+			productName = "UI Tests";
+			productReference = BD77F4481B58D33C00C609CD /* UI Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -183,7 +239,7 @@
 					BD3429621B44E96200C28FA6 = {
 						CreatedOnToolsVersion = 6.4;
 					};
-					BD3429791B44E96300C28FA6 = {
+					BD77F4471B58D33C00C609CD = {
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = BD3429621B44E96200C28FA6;
 					};
@@ -203,7 +259,7 @@
 			projectRoot = "";
 			targets = (
 				BD3429621B44E96200C28FA6 /* BheaviorKitDemo */,
-				BD3429791B44E96300C28FA6 /* BheaviorKitDemoTests */,
+				BD77F4471B58D33C00C609CD /* UI Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,7 +276,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD3429781B44E96300C28FA6 /* Resources */ = {
+		BD77F4461B58D33C00C609CD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,34 +285,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		68447B1DEACDB1CD4857D26B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UI Tests/Pods-UI Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9472079E5958F68DA85B6EE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BD34295F1B44E96200C28FA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD77F4431B58D2BA00C609CD /* KeybardScrollBehavior.swift in Sources */,
 				BD34296D1B44E96300C28FA6 /* DetailViewController.swift in Sources */,
 				BD51B87A1B454154008309C3 /* Behavior.swift in Sources */,
+				BD5892CC1B4ECBD90079A69F /* ManualImagePickerViewController.swift in Sources */,
 				BD34296B1B44E96300C28FA6 /* MasterViewController.swift in Sources */,
 				BD1CD48F1B4D6A94004B2050 /* ImagePickerBehavior.swift in Sources */,
 				BD3429691B44E96300C28FA6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD3429761B44E96300C28FA6 /* Sources */ = {
+		BD77F4441B58D33C00C609CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD3429811B44E96300C28FA6 /* BheaviorKitDemoTests.swift in Sources */,
+				BD77F45D1B58E96800C609CD /* KIFUITestActor.swift in Sources */,
+				BD77F4581B58D77900C609CD /* XCTestCase.swift in Sources */,
+				BD77F45A1B58D79D00C609CD /* ImagePickerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BD34297C1B44E96300C28FA6 /* PBXTargetDependency */ = {
+		BD77F44F1B58D33C00C609CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BD3429621B44E96200C28FA6 /* BheaviorKitDemo */;
-			targetProxy = BD34297B1B44E96300C28FA6 /* PBXContainerItemProxy */;
+			targetProxy = BD77F44E1B58D33C00C609CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -390,10 +483,12 @@
 			};
 			name = Release;
 		};
-		BD3429881B44E96300C28FA6 /* Debug */ = {
+		BD77F4511B58D33C00C609CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0348AD34322E735D9723E36E /* Pods-UI Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -402,24 +497,29 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = BheaviorKitDemoTests/Info.plist;
+				INFOPLIST_FILE = "UI Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UI Tests/UI Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BheaviorKitDemo.app/BheaviorKitDemo";
 			};
 			name = Debug;
 		};
-		BD3429891B44E96300C28FA6 /* Release */ = {
+		BD77F4521B58D33C00C609CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A930E83E1B335AA8930F5D /* Pods-UI Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = BheaviorKitDemoTests/Info.plist;
+				INFOPLIST_FILE = "UI Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UI Tests/UI Tests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BheaviorKitDemo.app/BheaviorKitDemo";
 			};
 			name = Release;
@@ -445,11 +545,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD3429871B44E96300C28FA6 /* Build configuration list for PBXNativeTarget "BheaviorKitDemoTests" */ = {
+		BD77F4501B58D33C00C609CD /* Build configuration list for PBXNativeTarget "UI Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD3429881B44E96300C28FA6 /* Debug */,
-				BD3429891B44E96300C28FA6 /* Release */,
+				BD77F4511B58D33C00C609CD /* Debug */,
+				BD77F4521B58D33C00C609CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

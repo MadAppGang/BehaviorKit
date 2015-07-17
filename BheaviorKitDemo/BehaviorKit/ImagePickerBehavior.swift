@@ -18,6 +18,10 @@ class ImagePickerBehavior: Behavior {
     /// Result image
     var image: UIImage? = nil
     
+    deinit {
+        println("\(self)")
+    }
+    
     /// UIImagePickerControllerCameraCaptureMode
     /// false   = Photo
     /// true    = Video
@@ -109,9 +113,9 @@ extension ImagePickerBehavior: UIActionSheetDelegate {
 // MARK: - Image Picker Controller delegate
 extension ImagePickerBehavior: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        image = info["UIImagePickerControllerEditedImage"] as? UIImage
+        image = info[UIImagePickerControllerEditedImage] as? UIImage
         if image == nil {
-            image = info["UIImagePickerControllerOriginalImage"] as? UIImage
+            image = info[UIImagePickerControllerOriginalImage] as? UIImage
         }
         if let imageView = resultImageView {
             imageView.image = image
