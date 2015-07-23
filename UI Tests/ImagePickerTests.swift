@@ -16,29 +16,29 @@ class ImagePickerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        //go to pick image bihavior view controller
+        tester.tapViewAndWait(TableCells.ImagePickerBehaviorCell.rawValue, waitViewAccessibilityLabel: NavBarTitle.ImagePickersList.rawValue)
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        //go to the root view controller
+        tester.tapViewWithAccessibilityLabel(ButtonLabel.Back.rawValue)
         tester.tapViewWithAccessibilityLabel(ButtonLabel.Back.rawValue)
         super.tearDown()
     }
     
-    func testLibraryImagePicker() {
-        // This is an example of a functional test case.
-        tester.tapViewWithAccessibilityLabel(TableCells.ImagePickerBehaviorCell.rawValue)
-        tester.waitForViewWithAccessibilityLabel(NavBarTitle.ImagePickersList.rawValue)
-        tester.tapViewWithAccessibilityLabel(TableCells.SelectFromLibrary.rawValue)
-        tester.waitForViewWithAccessibilityLabel(NavBarTitle.SelectFromLibrary.rawValue)
-        tester.tapViewWithAccessibilityLabel(ButtonLabel.GetImage.rawValue)
+    func testImagePicker_SelectSourceType_Photo() {
+        tester.tapViewWithAccessibilityLabel(TableCells.SelectSourceType.rawValue)
+        tester.waitForViewWithAccessibilityLabel(NavBarTitle.SelectSourceType.rawValue)
         
-        tester.acknowledgeSystemAlert()
-        tester.waitForTimeInterval(0.5)
-        tester.choosePhotoInLibrary(1, column: 1)
+        tester.tapViewAndWait(ButtonLabel.GetImage.rawValue, waitViewAccessibilityLabel: ButtonLabel.Photo.rawValue)
+        tester.tapViewWithAccessibilityLabel(ButtonLabel.Photo.rawValue, traits: UIAccessibilityTraitButton)
 
-        
-        tester.waitForViewWithAccessibilityLabel(NavBarTitle.SelectFromLibrary.rawValue)
+        tester.acknowledgeSystemAlert()
+
+        tester.tapViewAndWait(TableCells.CameraRoll.rawValue, waitViewAccessibilityLabel: ButtonLabel.Photos.rawValue)
+        tester.tapViewWithLabelMatching("Photo, [Lanscape,Portrait]*")
+        tester.waitForViewWithAccessibilityLabel(NavBarTitle.SelectSourceType.rawValue)
         if let imageView: UIImageView = tester.waitForViewWithAccessibilityLabel(ButtonLabel.ImageView.rawValue) as? UIImageView {
             XCTAssertNotNil(imageView.image,"nil result image")
         } else {
@@ -46,20 +46,43 @@ class ImagePickerTests: XCTestCase {
         }
     }
 
-    func testLibraryImagePicker2() {
-        // This is an example of a functional test case.
-        tester.tapViewWithAccessibilityLabel(TableCells.ImagePickerBehaviorCell.rawValue)
-        tester.waitForViewWithAccessibilityLabel(NavBarTitle.ImagePickersList.rawValue)
-        tester.tapViewWithAccessibilityLabel(TableCells.SelectFromLibrary.rawValue)
-        tester.waitForViewWithAccessibilityLabel(NavBarTitle.SelectFromLibrary.rawValue)
-        tester.tapViewWithAccessibilityLabel(ButtonLabel.GetImage.rawValue)
+    func testImagePicker_SelectSourceType_Camera() {
+        //fo emulator the same as testImagePicker_SelectSourceType_Photo
+        if TARGET_IPHONE_SIMULATOR == 1 {
+            tester.tapViewWithAccessibilityLabel(TableCells.SelectSourceType.rawValue)
+            tester.waitForViewWithAccessibilityLabel(NavBarTitle.SelectSourceType.rawValue)
+            
+            tester.tapViewAndWait(ButtonLabel.GetImage.rawValue, waitViewAccessibilityLabel: ButtonLabel.Camera.rawValue)
+            tester.tapViewWithAccessibilityLabel(ButtonLabel.Camera.rawValue, traits: UIAccessibilityTraitButton)
+            
+            tester.acknowledgeSystemAlert()
+            
+            tester.tapViewAndWait(TableCells.CameraRoll.rawValue, waitViewAccessibilityLabel: ButtonLabel.Photos.rawValue)
+            tester.tapViewWithLabelMatching("Photo, [Lanscape,Portrait]*")
+            tester.waitForViewWithAccessibilityLabel(NavBarTitle.SelectSourceType.rawValue)
+            if let imageView: UIImageView = tester.waitForViewWithAccessibilityLabel(ButtonLabel.ImageView.rawValue) as? UIImageView {
+                XCTAssertNotNil(imageView.image,"nil result image")
+            } else {
+                XCTAssert(false, "Cant find image view with result image")
+            }
+        } else {
+            //TOSO: implement test real camera
+        }
+        
+    }
+
+    func testImagePicker_SelectSourceType_SavedPhotos() {
+        tester.tapViewWithAccessibilityLabel(TableCells.SelectSourceType.rawValue)
+        tester.waitForViewWithAccessibilityLabel(NavBarTitle.SelectSourceType.rawValue)
+        
+        tester.tapViewAndWait(ButtonLabel.GetImage.rawValue, waitViewAccessibilityLabel: ButtonLabel.SavedPhotos.rawValue)
+        tester.tapViewWithAccessibilityLabel(ButtonLabel.SavedPhotos.rawValue, traits: UIAccessibilityTraitButton)
         
         tester.acknowledgeSystemAlert()
-        tester.waitForTimeInterval(0.5)
-        tester.choosePhotoInLibrary(1, column: 1)
-        
-        
-        tester.waitForViewWithAccessibilityLabel(NavBarTitle.SelectFromLibrary.rawValue)
+
+        tester.waitForViewWithAccessibilityLabel(ButtonLabel.Moments.rawValue)
+        tester.tapViewWithLabelMatching("Photo, [Lanscape,Portrait]*")
+        tester.waitForViewWithAccessibilityLabel(NavBarTitle.SelectSourceType.rawValue)
         if let imageView: UIImageView = tester.waitForViewWithAccessibilityLabel(ButtonLabel.ImageView.rawValue) as? UIImageView {
             XCTAssertNotNil(imageView.image,"nil result image")
         } else {
@@ -67,14 +90,52 @@ class ImagePickerTests: XCTestCase {
         }
     }
 
-//    func testPerformanceExample() {
-//        // This is an example of a performance test case.
-//        self.measureBlock() {
-//            // Put the code you want to measure the time of here.
-//        }
-//    }
+
     
+    
+    func testImagePicker_SelectFromLibrary() {
+        tester.tapViewWithAccessibilityLabel(TableCells.SelectFromLibrary.rawValue)
+        tester.waitForViewWithAccessibilityLabel(NavBarTitle.SelectFromLibrary.rawValue)
+        
+        
+        tester.tapViewWithAccessibilityLabel(ButtonLabel.GetImage.rawValue, traits: UIAccessibilityTraitButton)
+        tester.acknowledgeSystemAlert()
+        
+        tester.waitForViewWithAccessibilityLabel(ButtonLabel.Moments.rawValue)
+        tester.tapViewWithLabelMatching("Photo, [Lanscape,Portrait]*")
+        tester.waitForViewWithAccessibilityLabel(NavBarTitle.SelectFromLibrary.rawValue)
+        if let imageView: UIImageView = tester.waitForViewWithAccessibilityLabel(ButtonLabel.ImageView.rawValue) as? UIImageView {
+            XCTAssertNotNil(imageView.image,"nil result image")
+        } else {
+            XCTAssert(false, "Cant find image view with result image")
+        }
+    }
+    
+    
+    func testImagePicker_ManualHandle() {
+        tester.tapViewWithAccessibilityLabel(TableCells.ManualHandle.rawValue)
+        tester.waitForViewWithAccessibilityLabel(NavBarTitle.ManualHandle.rawValue)
+        
+        
+        tester.tapViewWithAccessibilityLabel(ButtonLabel.GetImage.rawValue, traits: UIAccessibilityTraitButton)
+        tester.acknowledgeSystemAlert()
+        
+        tester.tapViewAndWait(TableCells.CameraRoll.rawValue, waitViewAccessibilityLabel: ButtonLabel.Photos.rawValue)
+        tester.tapViewWithLabelMatching("Photo, [Lanscape,Portrait]*")
+        tester.waitForViewWithAccessibilityLabel(ButtonLabel.Choose.rawValue)
+        tester.tapViewWithAccessibilityLabel(ButtonLabel.Choose.rawValue)
+        tester.waitForViewWithAccessibilityLabel(NavBarTitle.ManualHandle.rawValue)
+        if let imageView: UIImageView = tester.waitForViewWithAccessibilityLabel(ButtonLabel.ImageView.rawValue) as? UIImageView {
+            XCTAssertNotNil(imageView.image,"nil result image")
+        } else {
+            XCTAssert(false, "Cant find image view with result image")
+        }
+    }
+
 }
+
+
+
 
 
 
@@ -91,12 +152,23 @@ private extension ImagePickerTests {
         case SelectSourceType = "Select source type"
         case SelectFromLibrary = "Select from Library"
         case ManualHandle = "Manual handle"
+        case CameraRoll = "Camera Roll"
+
     }
     
     enum ButtonLabel: String {
         case Back = "Back"
         case GetImage = "Get Image"
+        case PickImage = "Pick Image"
         case ImageView = "Image View"
+        case Photo = "Photo"
+        case Camera = "Camera"
+        case SavedPhotos = "Saved photos"
+        
+        case Photos = "Photos"
+        case Moments = "Moments"
+        case Choose = "Choose"
+
     }
     
     enum NavBarTitle: String {

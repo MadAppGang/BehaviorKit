@@ -23,4 +23,30 @@ extension KIFUITestActor {
         
         self.tapScreenAtPoint(thumbnailCenter)
     }
+    
+    func tapViewAndWait(tapViewAccessibilityLabel:String, waitViewAccessibilityLabel:String) -> UIView?{
+        tapViewWithAccessibilityLabel(tapViewAccessibilityLabel)
+        return waitForViewWithAccessibilityLabel(waitViewAccessibilityLabel)
+    }
+    
+    func tapViewWithLabelMatching(Pattern:String) {
+        if let regex = NSRegularExpression(pattern: Pattern, options: nil, error: nil) {
+            let element = UIApplication.sharedApplication().accessibilityElementMatchingBlock(){ (e: UIAccessibilityElement!) -> Bool in
+                if let al = e.accessibilityLabel {
+                    if let check = regex.firstMatchInString(al, options: nil, range: NSMakeRange(0, count(al))) {
+                        return true
+                    }
+                }
+                return false
+            }
+            
+            if let element = element {
+                if let view = UIAccessibilityElement.viewContainingAccessibilityElement(element) {
+                    tapAccessibilityElement(element, inView: view)
+                }
+            }
+
+        }
+        
+    }
 }
