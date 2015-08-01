@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0FC0CB1B6CC52A0088DD57 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0FC0CA1B6CC52A0088DD57 /* UIResponder.swift */; };
+		BD0FC0CD1B6CC9E20088DD57 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0FC0CC1B6CC9E20088DD57 /* UIView.swift */; };
 		BD1CD48F1B4D6A94004B2050 /* ImagePickerBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1CD48E1B4D6A94004B2050 /* ImagePickerBehavior.swift */; };
 		BD1CD4941B4D809A004B2050 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD1CD4961B4D809A004B2050 /* Localizable.strings */; };
 		BD3429691B44E96300C28FA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3429681B44E96300C28FA6 /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 		0348AD34322E735D9723E36E /* Pods-UI Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UI Tests/Pods-UI Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		36A930E83E1B335AA8930F5D /* Pods-UI Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UI Tests/Pods-UI Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A973E2160FA8DA267A03CFC6 /* libPods-UI Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UI Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0FC0CA1B6CC52A0088DD57 /* UIResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIResponder.swift; path = BehaviorKit/Keyboard/UIResponder.swift; sourceTree = "<group>"; };
+		BD0FC0CC1B6CC9E20088DD57 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = BehaviorKit/Keyboard/UIView.swift; sourceTree = "<group>"; };
 		BD1CD48E1B4D6A94004B2050 /* ImagePickerBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePickerBehavior.swift; path = BehaviorKit/ImagePickerBehavior.swift; sourceTree = "<group>"; };
 		BD1CD4901B4D7FDE004B2050 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BD1CD4911B4D7FDE004B2050 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				BD77F4421B58D2BA00C609CD /* KeybardScrollBehavior.swift */,
+				BD0FC0CA1B6CC52A0088DD57 /* UIResponder.swift */,
+				BD0FC0CC1B6CC9E20088DD57 /* UIView.swift */,
 			);
 			name = Keyboard;
 			sourceTree = "<group>";
@@ -327,8 +333,10 @@
 				BD34296D1B44E96300C28FA6 /* DetailViewController.swift in Sources */,
 				BD51B87A1B454154008309C3 /* Behavior.swift in Sources */,
 				BD5892CC1B4ECBD90079A69F /* ManualImagePickerViewController.swift in Sources */,
+				BD0FC0CB1B6CC52A0088DD57 /* UIResponder.swift in Sources */,
 				BD34296B1B44E96300C28FA6 /* MasterViewController.swift in Sources */,
 				BD1CD48F1B4D6A94004B2050 /* ImagePickerBehavior.swift in Sources */,
+				BD0FC0CD1B6CC9E20088DD57 /* UIView.swift in Sources */,
 				BD3429691B44E96300C28FA6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

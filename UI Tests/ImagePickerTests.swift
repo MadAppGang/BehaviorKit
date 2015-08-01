@@ -34,7 +34,7 @@ class ImagePickerTests: XCTestCase {
         tester.tapViewAndWait(ButtonLabel.GetImage.rawValue, waitViewAccessibilityLabel: ButtonLabel.Photo.rawValue)
         tester.tapViewWithAccessibilityLabel(ButtonLabel.Photo.rawValue, traits: UIAccessibilityTraitButton)
 
-        tester.acknowledgeSystemAlert()
+        tester.acknowledgeSystemAlertIfPossible()
 
         tester.tapViewAndWait(TableCells.CameraRoll.rawValue, waitViewAccessibilityLabel: ButtonLabel.Photos.rawValue)
         tester.tapViewWithLabelMatching("Photo, [Lanscape,Portrait]*")
@@ -54,8 +54,8 @@ class ImagePickerTests: XCTestCase {
             
             tester.tapViewAndWait(ButtonLabel.GetImage.rawValue, waitViewAccessibilityLabel: ButtonLabel.Camera.rawValue)
             tester.tapViewWithAccessibilityLabel(ButtonLabel.Camera.rawValue, traits: UIAccessibilityTraitButton)
-            
-            tester.acknowledgeSystemAlert()
+
+            tester.acknowledgeSystemAlertIfPossible()
             
             tester.tapViewAndWait(TableCells.CameraRoll.rawValue, waitViewAccessibilityLabel: ButtonLabel.Photos.rawValue)
             tester.tapViewWithLabelMatching("Photo, [Lanscape,Portrait]*")
@@ -66,7 +66,20 @@ class ImagePickerTests: XCTestCase {
                 XCTAssert(false, "Cant find image view with result image")
             }
         } else {
-            //TOSO: implement test real camera
+            tester.tapViewWithAccessibilityLabel(TableCells.SelectSourceType.rawValue)
+            tester.waitForViewWithAccessibilityLabel(NavBarTitle.SelectSourceType.rawValue)
+            
+            tester.tapViewAndWait(ButtonLabel.GetImage.rawValue, waitViewAccessibilityLabel: ButtonLabel.Camera.rawValue)
+            tester.tapViewWithAccessibilityLabel(ButtonLabel.Camera.rawValue, traits: UIAccessibilityTraitButton)
+            
+            tester.acknowledgeSystemAlertIfPossible()
+            tester.tapViewAndWait(ButtonLabel.TakePicture.rawValue, waitViewAccessibilityLabel: ButtonLabel.UsePhoto.rawValue)
+            tester.tapViewAndWait(ButtonLabel.UsePhoto.rawValue, waitViewAccessibilityLabel: NavBarTitle.SelectSourceType.rawValue)
+            if let imageView: UIImageView = tester.waitForViewWithAccessibilityLabel(ButtonLabel.ImageView.rawValue) as? UIImageView {
+                XCTAssertNotNil(imageView.image,"nil result image")
+            } else {
+                XCTAssert(false, "Cant find image view with result image")
+            }
         }
         
     }
@@ -78,7 +91,7 @@ class ImagePickerTests: XCTestCase {
         tester.tapViewAndWait(ButtonLabel.GetImage.rawValue, waitViewAccessibilityLabel: ButtonLabel.SavedPhotos.rawValue)
         tester.tapViewWithAccessibilityLabel(ButtonLabel.SavedPhotos.rawValue, traits: UIAccessibilityTraitButton)
         
-        tester.acknowledgeSystemAlert()
+        tester.acknowledgeSystemAlertIfPossible()
 
         tester.waitForViewWithAccessibilityLabel(ButtonLabel.Moments.rawValue)
         tester.tapViewWithLabelMatching("Photo, [Lanscape,Portrait]*")
@@ -99,7 +112,7 @@ class ImagePickerTests: XCTestCase {
         
         
         tester.tapViewWithAccessibilityLabel(ButtonLabel.GetImage.rawValue, traits: UIAccessibilityTraitButton)
-        tester.acknowledgeSystemAlert()
+        tester.acknowledgeSystemAlertIfPossible()
         
         tester.waitForViewWithAccessibilityLabel(ButtonLabel.Moments.rawValue)
         tester.tapViewWithLabelMatching("Photo, [Lanscape,Portrait]*")
@@ -118,7 +131,7 @@ class ImagePickerTests: XCTestCase {
         
         
         tester.tapViewWithAccessibilityLabel(ButtonLabel.GetImage.rawValue, traits: UIAccessibilityTraitButton)
-        tester.acknowledgeSystemAlert()
+        tester.acknowledgeSystemAlertIfPossible()
         
         tester.tapViewAndWait(TableCells.CameraRoll.rawValue, waitViewAccessibilityLabel: ButtonLabel.Photos.rawValue)
         tester.tapViewWithLabelMatching("Photo, [Lanscape,Portrait]*")
@@ -164,6 +177,8 @@ private extension ImagePickerTests {
         case Photo = "Photo"
         case Camera = "Camera"
         case SavedPhotos = "Saved photos"
+        case TakePicture = "Take picture"
+        case UsePhoto = "Use photo"
         
         case Photos = "Photos"
         case Moments = "Moments"

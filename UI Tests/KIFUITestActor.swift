@@ -49,4 +49,10 @@ extension KIFUITestActor {
         }
         
     }
+    
+    func acknowledgeSystemAlertIfPossible() {
+        #if arch(i386) || arch(x86_64)
+        acknowledgeSystemAlert()
+        #endif
+    }
 }
