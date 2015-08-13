@@ -20,6 +20,7 @@
 		BD51B87A1B454154008309C3 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51B8791B454154008309C3 /* Behavior.swift */; };
 		BD5892CC1B4ECBD90079A69F /* ManualImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5892CB1B4ECBD90079A69F /* ManualImagePickerViewController.swift */; };
 		BD71787D1B7A4068007E52A1 /* TextFieldValidatorBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71787C1B7A4068007E52A1 /* TextFieldValidatorBehavior.swift */; };
+		BD71787F1B7B36F7007E52A1 /* ValidatorBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71787E1B7B36F7007E52A1 /* ValidatorBehavior.swift */; };
 		BD77F4431B58D2BA00C609CD /* KeybardScrollBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F4421B58D2BA00C609CD /* KeybardScrollBehavior.swift */; };
 		BD77F4581B58D77900C609CD /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F4571B58D77900C609CD /* XCTestCase.swift */; };
 		BD77F45A1B58D79D00C609CD /* ImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F4591B58D79D00C609CD /* ImagePickerTests.swift */; };
@@ -57,6 +58,7 @@
 		BD51B8791B454154008309C3 /* Behavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = BehaviorKit/Behavior.swift; sourceTree = "<group>"; };
 		BD5892CB1B4ECBD90079A69F /* ManualImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualImagePickerViewController.swift; sourceTree = "<group>"; };
 		BD71787C1B7A4068007E52A1 /* TextFieldValidatorBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldValidatorBehavior.swift; path = BehaviorKit/TextFieldValidators/TextFieldValidatorBehavior.swift; sourceTree = "<group>"; };
+		BD71787E1B7B36F7007E52A1 /* ValidatorBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidatorBehavior.swift; path = BehaviorKit/ValidatorBehavior.swift; sourceTree = "<group>"; };
 		BD77F4421B58D2BA00C609CD /* KeybardScrollBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeybardScrollBehavior.swift; path = BehaviorKit/Keyboard/KeybardScrollBehavior.swift; sourceTree = "<group>"; };
 		BD77F4481B58D33C00C609CD /* UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD77F44B1B58D33C00C609CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				BD71787B1B7A4005007E52A1 /* TextFieldValidators */,
 				BD51B8791B454154008309C3 /* Behavior.swift */,
 				BD1CD48E1B4D6A94004B2050 /* ImagePickerBehavior.swift */,
+				BD71787E1B7B36F7007E52A1 /* ValidatorBehavior.swift */,
 			);
 			name = BehaviorKit;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD77F4431B58D2BA00C609CD /* KeybardScrollBehavior.swift in Sources */,
+				BD71787F1B7B36F7007E52A1 /* ValidatorBehavior.swift in Sources */,
 				BD34296D1B44E96300C28FA6 /* DetailViewController.swift in Sources */,
 				BD71787D1B7A4068007E52A1 /* TextFieldValidatorBehavior.swift in Sources */,
 				BD51B87A1B454154008309C3 /* Behavior.swift in Sources */,
