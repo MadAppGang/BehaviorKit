@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -94,6 +94,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="SnO-8t-dwy" kind="show" id="Gy0-D2-xo9"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="25d-VC-J0A" style="IBUITableViewCellStyleDefault" id="USp-ml-3Mx">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -180,6 +183,112 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="605" y="64"/>
+        </scene>
+        <!--Text Field Validator View Controller-->
+        <scene sceneID="eYR-rF-jv6">
+            <objects>
+                <viewController id="SnO-8t-dwy" customClass="TextFieldValidatorViewController" customModule="BheaviorKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5eT-8B-muZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="hks-EG-dYO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zbw-FT-mTS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="number have to be here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejk-Ca-5zl">
+                                <rect key="frame" x="16" y="72" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not validated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDR-Kc-P7a">
+                                <rect key="frame" x="16" y="110" width="102" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email have to be here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UVT-Tb-uXV">
+                                <rect key="frame" x="16" y="138.5" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="minimum 3 chars have to be here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8g-2W-cGQ">
+                                <rect key="frame" x="16" y="205" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not validated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoD-nC-487">
+                                <rect key="frame" x="16" y="176.5" width="102" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not validated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyH-Jj-iLL">
+                                <rect key="frame" x="16" y="243" width="102" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZyH-Jj-iLL" firstAttribute="top" secondItem="b8g-2W-cGQ" secondAttribute="bottom" constant="8" id="0aA-pd-gOM"/>
+                            <constraint firstItem="DoD-nC-487" firstAttribute="top" secondItem="UVT-Tb-uXV" secondAttribute="bottom" constant="8" id="4sp-jq-Mbr"/>
+                            <constraint firstItem="UVT-Tb-uXV" firstAttribute="leading" secondItem="zbw-FT-mTS" secondAttribute="leadingMargin" id="5oC-Bp-lu9"/>
+                            <constraint firstItem="b8g-2W-cGQ" firstAttribute="top" secondItem="DoD-nC-487" secondAttribute="bottom" constant="8" id="8HJ-hV-4Sg"/>
+                            <constraint firstItem="UVT-Tb-uXV" firstAttribute="top" secondItem="MDR-Kc-P7a" secondAttribute="bottom" constant="8" id="Cb7-4c-Rcp"/>
+                            <constraint firstItem="UVT-Tb-uXV" firstAttribute="trailing" secondItem="zbw-FT-mTS" secondAttribute="trailingMargin" id="Dtd-Bu-kf6"/>
+                            <constraint firstItem="ejk-Ca-5zl" firstAttribute="trailing" secondItem="zbw-FT-mTS" secondAttribute="trailingMargin" id="Ht2-OO-7p0"/>
+                            <constraint firstItem="b8g-2W-cGQ" firstAttribute="leading" secondItem="zbw-FT-mTS" secondAttribute="leadingMargin" id="KrV-aV-iBS"/>
+                            <constraint firstItem="MDR-Kc-P7a" firstAttribute="top" secondItem="ejk-Ca-5zl" secondAttribute="bottom" constant="8" id="NZv-fa-Ic9"/>
+                            <constraint firstItem="b8g-2W-cGQ" firstAttribute="trailing" secondItem="zbw-FT-mTS" secondAttribute="trailingMargin" id="ck1-Ju-6mr"/>
+                            <constraint firstItem="DoD-nC-487" firstAttribute="leading" secondItem="UVT-Tb-uXV" secondAttribute="leading" id="d4B-3Q-RHa"/>
+                            <constraint firstItem="ZyH-Jj-iLL" firstAttribute="leading" secondItem="b8g-2W-cGQ" secondAttribute="leading" id="dpk-e8-eTA"/>
+                            <constraint firstItem="ejk-Ca-5zl" firstAttribute="top" secondItem="5eT-8B-muZ" secondAttribute="bottom" constant="8" id="mIg-cg-AYT"/>
+                            <constraint firstItem="ejk-Ca-5zl" firstAttribute="leading" secondItem="zbw-FT-mTS" secondAttribute="leadingMargin" id="re8-Th-gm3"/>
+                            <constraint firstItem="MDR-Kc-P7a" firstAttribute="leading" secondItem="zbw-FT-mTS" secondAttribute="leadingMargin" id="s2R-B5-gbV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="charsValidationResult" destination="ZyH-Jj-iLL" id="DSJ-R4-CsU"/>
+                        <outlet property="emailValidationResult" destination="DoD-nC-487" id="giN-pw-hwq"/>
+                        <outlet property="numberValidationResult" destination="MDR-Kc-P7a" id="uBT-KY-Di2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AfU-HK-ZHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="ioY-LW-gHS" userLabel="Number Validator" customClass="TextFieldValidatorBehavior" customModule="BheaviorKitDemo" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="regexpPattern" value="\d*[.]?\d+"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="validateWhenType" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="numberValidation:" destination="SnO-8t-dwy" eventType="valueChanged" id="zjh-Q5-Hpg"/>
+                        <outlet property="nextTextField" destination="UVT-Tb-uXV" id="ptl-bg-Jkw"/>
+                        <outlet property="textField" destination="ejk-Ca-5zl" id="Tlh-aI-A9a"/>
+                    </connections>
+                </customObject>
+                <customObject id="o2f-HZ-oSj" userLabel="Email Validator" customClass="TextFieldValidatorBehavior" customModule="BheaviorKitDemo" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="regexpPattern" value="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="validateWhenType" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="emailValidation:" destination="SnO-8t-dwy" eventType="valueChanged" id="KLj-oO-UpY"/>
+                        <outlet property="nextTextField" destination="b8g-2W-cGQ" id="4e4-Q5-JpA"/>
+                        <outlet property="textField" destination="UVT-Tb-uXV" id="P5z-0g-S04"/>
+                    </connections>
+                </customObject>
+                <customObject id="bFm-BC-xuD" userLabel="Char Count Validator" customClass="TextFieldValidatorBehavior" customModule="BheaviorKitDemo" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="regexpPattern" value="^.{3,}$"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="charsValidation:" destination="SnO-8t-dwy" eventType="valueChanged" id="WKl-a9-gjR"/>
+                        <outlet property="textField" destination="b8g-2W-cGQ" id="2dy-Rq-adc"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="605" y="851"/>
         </scene>
         <!--Image Picker Behavior-->
         <scene sceneID="Z0u-st-GeZ">

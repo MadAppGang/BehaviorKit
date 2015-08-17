@@ -25,6 +25,7 @@
 		BD77F4581B58D77900C609CD /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F4571B58D77900C609CD /* XCTestCase.swift */; };
 		BD77F45A1B58D79D00C609CD /* ImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F4591B58D79D00C609CD /* ImagePickerTests.swift */; };
 		BD77F45D1B58E96800C609CD /* KIFUITestActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F45C1B58E96800C609CD /* KIFUITestActor.swift */; };
+		BD7DB39D1B81AD8700E19FDD /* TextFieldValidatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7DB39C1B81AD8700E19FDD /* TextFieldValidatorViewController.swift */; };
 		E6B21A8D107FF0238853D81F /* libPods-UI Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A973E2160FA8DA267A03CFC6 /* libPods-UI Tests.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		BD77F4571B58D77900C609CD /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		BD77F4591B58D79D00C609CD /* ImagePickerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerTests.swift; sourceTree = "<group>"; };
 		BD77F45C1B58E96800C609CD /* KIFUITestActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KIFUITestActor.swift; sourceTree = "<group>"; };
+		BD7DB39C1B81AD8700E19FDD /* TextFieldValidatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldValidatorViewController.swift; path = ViewControllers/TextFieldValidatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		BD3429651B44E96300C28FA6 /* BheaviorKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BD7DB39B1B81AD6900E19FDD /* ViewControllers */,
 				BD51B8761B454105008309C3 /* BehaviorKit */,
 				BD3429681B44E96300C28FA6 /* AppDelegate.swift */,
 				BD34296A1B44E96300C28FA6 /* MasterViewController.swift */,
@@ -197,6 +200,14 @@
 				BD77F4591B58D79D00C609CD /* ImagePickerTests.swift */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		BD7DB39B1B81AD6900E19FDD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD7DB39C1B81AD8700E19FDD /* TextFieldValidatorViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FCDC35D5DA0608D3CC4833E5 /* Frameworks */ = {
@@ -354,6 +365,7 @@
 				BD1CD48F1B4D6A94004B2050 /* ImagePickerBehavior.swift in Sources */,
 				BD0FC0CD1B6CC9E20088DD57 /* UIView.swift in Sources */,
 				BD3429691B44E96300C28FA6 /* AppDelegate.swift in Sources */,
+				BD7DB39D1B81AD8700E19FDD /* TextFieldValidatorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

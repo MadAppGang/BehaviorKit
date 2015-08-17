@@ -27,7 +27,7 @@ class TextFieldValidatorBehavior: ValidatorBehavior {
     }
 
     //case sensitive validation, default is false
-    @IBInspectable var caseSensitive = false {
+    @IBInspectable var caseSensitive: Bool = false {
         didSet {
             forceValidation(self)
         }
@@ -35,7 +35,7 @@ class TextFieldValidatorBehavior: ValidatorBehavior {
     
     /** If set to NO text will be validated when editing is done.
     Default set to YES. */
-    @IBInspectable var validateWhenType = true
+    @IBInspectable var validateWhenType: Bool = true
     
     /** Field is validate when its value will be equal or longer than set number.
     If text is shorter than this value the field looks normal (both colors valid and invalid aren't apply).
@@ -45,7 +45,7 @@ class TextFieldValidatorBehavior: ValidatorBehavior {
     /**
     *  Text field to validate
     */
-    @IBOutlet var textField:UITextField! = nil {
+    @IBOutlet var textField:UITextField? = nil {
         didSet {
             if let textField = textField {
                 textField.delegate = self
@@ -58,7 +58,7 @@ class TextFieldValidatorBehavior: ValidatorBehavior {
     *  has no effect, when nextTextField connected
     *  NO by default
     */
-    @IBInspectable var hideKeyboardOnEnter = false
+    @IBInspectable var hideKeyboardOnEnter: Bool = false
     
     /**
     *  If next text field connected, makes it first responder on "Enter" button press
@@ -71,7 +71,7 @@ class TextFieldValidatorBehavior: ValidatorBehavior {
 
 
     override func forceValidation(sender: AnyObject) {
-        if let text = textField.text {
+        if let text = textField?.text {
                 validateField(text)
         }
     }
@@ -85,7 +85,7 @@ private extension TextFieldValidatorBehavior {
             self.validationResult = .CantValidate
         } else {
             if let regexpPattern = regexpPattern  {
-                let textRange = NSMakeRange(0, count(regexpPattern))
+                let textRange = NSMakeRange(0, count(text))
                 let matches = regexp!.matchesInString(text, options: nil, range: textRange)
                 
                 var resultRange = NSMakeRange(NSNotFound, 0)
