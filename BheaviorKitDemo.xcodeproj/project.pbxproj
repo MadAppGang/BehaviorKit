@@ -26,6 +26,7 @@
 		BD77F45A1B58D79D00C609CD /* ImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F4591B58D79D00C609CD /* ImagePickerTests.swift */; };
 		BD77F45D1B58E96800C609CD /* KIFUITestActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F45C1B58E96800C609CD /* KIFUITestActor.swift */; };
 		BD7DB39D1B81AD8700E19FDD /* TextFieldValidatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7DB39C1B81AD8700E19FDD /* TextFieldValidatorViewController.swift */; };
+		BD7DB39F1B81B30100E19FDD /* TextFieldHighlightingValidatorBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7DB39E1B81B30100E19FDD /* TextFieldHighlightingValidatorBehavior.swift */; };
 		E6B21A8D107FF0238853D81F /* libPods-UI Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A973E2160FA8DA267A03CFC6 /* libPods-UI Tests.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		BD77F4591B58D79D00C609CD /* ImagePickerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerTests.swift; sourceTree = "<group>"; };
 		BD77F45C1B58E96800C609CD /* KIFUITestActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KIFUITestActor.swift; sourceTree = "<group>"; };
 		BD7DB39C1B81AD8700E19FDD /* TextFieldValidatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldValidatorViewController.swift; path = ViewControllers/TextFieldValidatorViewController.swift; sourceTree = "<group>"; };
+		BD7DB39E1B81B30100E19FDD /* TextFieldHighlightingValidatorBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldHighlightingValidatorBehavior.swift; path = BehaviorKit/TextFieldValidators/TextFieldHighlightingValidatorBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				BD71787C1B7A4068007E52A1 /* TextFieldValidatorBehavior.swift */,
+				BD7DB39E1B81B30100E19FDD /* TextFieldHighlightingValidatorBehavior.swift */,
 			);
 			name = TextFieldValidators;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			files = (
 				BD77F4431B58D2BA00C609CD /* KeybardScrollBehavior.swift in Sources */,
 				BD71787F1B7B36F7007E52A1 /* ValidatorBehavior.swift in Sources */,
+				BD7DB39F1B81B30100E19FDD /* TextFieldHighlightingValidatorBehavior.swift in Sources */,
 				BD34296D1B44E96300C28FA6 /* DetailViewController.swift in Sources */,
 				BD71787D1B7A4068007E52A1 /* TextFieldValidatorBehavior.swift in Sources */,
 				BD51B87A1B454154008309C3 /* Behavior.swift in Sources */,
