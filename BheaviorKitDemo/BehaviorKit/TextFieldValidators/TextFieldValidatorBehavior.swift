@@ -17,10 +17,13 @@ class TextFieldValidatorBehavior: ValidatorBehavior {
             if (!caseSensitive) {
                 options = .CaseInsensitive;
             }
+            regexp = nil
             if let regexpPattern = regexpPattern {
-                regexp = NSRegularExpression(pattern: regexpPattern, options: options, error: nil)
-            } else {
-                regexp = nil
+                do {
+                    try regexp = NSRegularExpression(pattern: regexpPattern, options: options)
+                } catch {
+                    //nothing to do to recover
+                }
             }
             forceValidation(self)
         }
@@ -81,12 +84,12 @@ class TextFieldValidatorBehavior: ValidatorBehavior {
 //Private implementation
 private extension TextFieldValidatorBehavior {
     private func validateField(text:String) {
-        if count(text) < minimalNumberOfCharactersToStartValidation {
+        if text.characters.count < minimalNumberOfCharactersToStartValidation {
             self.validationResult = .CantValidate
         } else {
-            if let regexpPattern = regexpPattern  {
-                let textRange = NSMakeRange(0, count(text))
-                let matches = regexp!.matchesInString(text, options: nil, range: textRange)
+            if let _ = regexpPattern  {
+                let textRange = NSMakeRange(0, text.characters.count)
+                let matches = regexp!.matchesInString(text, options: [], range: textRange)
                 
                 var resultRange = NSMakeRange(NSNotFound, 0)
                 if matches.count == 1 {
@@ -105,11 +108,15 @@ private extension TextFieldValidatorBehavior {
 extension TextFieldValidatorBehavior: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        validateField(textField.text)
+        if let text = textField.text {
+            validateField(text)
+        }
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        validateField(textField.text)
+        if let text = textField.text {
+            validateField(text)
+        }
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
@@ -123,7 +130,8 @@ extension TextFieldValidatorBehavior: UITextFieldDelegate {
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        validateField(textField.text)
+        guard let text  = textField.text else { return true }
+        validateField(text)
         if let nextTextField = nextTextField {
             nextTextField.becomeFirstResponder()
         } else if hideKeyboardOnEnter {

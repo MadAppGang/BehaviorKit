@@ -11,6 +11,7 @@
 		BD0FC0CD1B6CC9E20088DD57 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0FC0CC1B6CC9E20088DD57 /* UIView.swift */; };
 		BD1CD48F1B4D6A94004B2050 /* ImagePickerBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1CD48E1B4D6A94004B2050 /* ImagePickerBehavior.swift */; };
 		BD1CD4941B4D809A004B2050 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD1CD4961B4D809A004B2050 /* Localizable.strings */; };
+		BD2D7A0C1BCF7AAD00E61B8C /* PhotoPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7A0B1BCF7AAD00E61B8C /* PhotoPickerUITests.swift */; settings = {ASSET_TAGS = (); }; };
 		BD3429691B44E96300C28FA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3429681B44E96300C28FA6 /* AppDelegate.swift */; };
 		BD34296B1B44E96300C28FA6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD34296A1B44E96300C28FA6 /* MasterViewController.swift */; };
 		BD34296D1B44E96300C28FA6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD34296C1B44E96300C28FA6 /* DetailViewController.swift */; };
@@ -22,16 +23,13 @@
 		BD71787D1B7A4068007E52A1 /* TextFieldValidatorBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71787C1B7A4068007E52A1 /* TextFieldValidatorBehavior.swift */; };
 		BD71787F1B7B36F7007E52A1 /* ValidatorBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71787E1B7B36F7007E52A1 /* ValidatorBehavior.swift */; };
 		BD77F4431B58D2BA00C609CD /* KeybardScrollBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F4421B58D2BA00C609CD /* KeybardScrollBehavior.swift */; };
-		BD77F4581B58D77900C609CD /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F4571B58D77900C609CD /* XCTestCase.swift */; };
-		BD77F45A1B58D79D00C609CD /* ImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F4591B58D79D00C609CD /* ImagePickerTests.swift */; };
-		BD77F45D1B58E96800C609CD /* KIFUITestActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77F45C1B58E96800C609CD /* KIFUITestActor.swift */; };
 		BD7DB39D1B81AD8700E19FDD /* TextFieldValidatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7DB39C1B81AD8700E19FDD /* TextFieldValidatorViewController.swift */; };
 		BD7DB39F1B81B30100E19FDD /* TextFieldHighlightingValidatorBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7DB39E1B81B30100E19FDD /* TextFieldHighlightingValidatorBehavior.swift */; };
-		E6B21A8D107FF0238853D81F /* libPods-UI Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A973E2160FA8DA267A03CFC6 /* libPods-UI Tests.a */; };
+		BDA0AE3A1BCF1DED009231A9 /* BheaviorKitDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA0AE391BCF1DED009231A9 /* BheaviorKitDemoUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BD77F44E1B58D33C00C609CD /* PBXContainerItemProxy */ = {
+		BDA0AE3C1BCF1DED009231A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BD34295B1B44E96200C28FA6 /* Project object */;
 			proxyType = 1;
@@ -51,6 +49,7 @@
 		BD1CD4911B4D7FDE004B2050 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD1CD4951B4D809A004B2050 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BD1CD4971B4D80AC004B2050 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD2D7A0B1BCF7AAD00E61B8C /* PhotoPickerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerUITests.swift; sourceTree = "<group>"; };
 		BD3429631B44E96300C28FA6 /* BheaviorKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BheaviorKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD3429671B44E96300C28FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD3429681B44E96300C28FA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,14 +61,11 @@
 		BD71787C1B7A4068007E52A1 /* TextFieldValidatorBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldValidatorBehavior.swift; path = BehaviorKit/TextFieldValidators/TextFieldValidatorBehavior.swift; sourceTree = "<group>"; };
 		BD71787E1B7B36F7007E52A1 /* ValidatorBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidatorBehavior.swift; path = BehaviorKit/ValidatorBehavior.swift; sourceTree = "<group>"; };
 		BD77F4421B58D2BA00C609CD /* KeybardScrollBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeybardScrollBehavior.swift; path = BehaviorKit/Keyboard/KeybardScrollBehavior.swift; sourceTree = "<group>"; };
-		BD77F4481B58D33C00C609CD /* UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD77F44B1B58D33C00C609CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD77F4531B58D73300C609CD /* UI Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UI Tests-Bridging-Header.h"; sourceTree = "<group>"; };
-		BD77F4571B58D77900C609CD /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
-		BD77F4591B58D79D00C609CD /* ImagePickerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerTests.swift; sourceTree = "<group>"; };
-		BD77F45C1B58E96800C609CD /* KIFUITestActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KIFUITestActor.swift; sourceTree = "<group>"; };
 		BD7DB39C1B81AD8700E19FDD /* TextFieldValidatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldValidatorViewController.swift; path = ViewControllers/TextFieldValidatorViewController.swift; sourceTree = "<group>"; };
 		BD7DB39E1B81B30100E19FDD /* TextFieldHighlightingValidatorBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldHighlightingValidatorBehavior.swift; path = BehaviorKit/TextFieldValidators/TextFieldHighlightingValidatorBehavior.swift; sourceTree = "<group>"; };
+		BDA0AE371BCF1DED009231A9 /* BheaviorKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BheaviorKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDA0AE391BCF1DED009231A9 /* BheaviorKitDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BheaviorKitDemoUITests.swift; sourceTree = "<group>"; };
+		BDA0AE3B1BCF1DED009231A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +76,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD77F4451B58D33C00C609CD /* Frameworks */ = {
+		BDA0AE341BCF1DED009231A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6B21A8D107FF0238853D81F /* libPods-UI Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				BD3429651B44E96300C28FA6 /* BheaviorKitDemo */,
-				BD77F4491B58D33C00C609CD /* UI Tests */,
+				BDA0AE381BCF1DED009231A9 /* BheaviorKitDemoUITests */,
 				BD3429641B44E96300C28FA6 /* Products */,
 				13B53EB2A9DF793740AA000D /* Pods */,
 				FCDC35D5DA0608D3CC4833E5 /* Frameworks */,
@@ -115,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				BD3429631B44E96300C28FA6 /* BheaviorKitDemo.app */,
-				BD77F4481B58D33C00C609CD /* UI Tests.xctest */,
+				BDA0AE371BCF1DED009231A9 /* BheaviorKitDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,40 +172,22 @@
 			name = Keyboard;
 			sourceTree = "<group>";
 		};
-		BD77F4491B58D33C00C609CD /* UI Tests */ = {
-			isa = PBXGroup;
-			children = (
-				BD77F45B1B58D7A400C609CD /* Tests */,
-				BD77F44A1B58D33C00C609CD /* Supporting Files */,
-				BD77F4531B58D73300C609CD /* UI Tests-Bridging-Header.h */,
-				BD77F4571B58D77900C609CD /* XCTestCase.swift */,
-				BD77F45C1B58E96800C609CD /* KIFUITestActor.swift */,
-			);
-			path = "UI Tests";
-			sourceTree = "<group>";
-		};
-		BD77F44A1B58D33C00C609CD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BD77F44B1B58D33C00C609CD /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BD77F45B1B58D7A400C609CD /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				BD77F4591B58D79D00C609CD /* ImagePickerTests.swift */,
-			);
-			name = Tests;
-			sourceTree = "<group>";
-		};
 		BD7DB39B1B81AD6900E19FDD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				BD7DB39C1B81AD8700E19FDD /* TextFieldValidatorViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BDA0AE381BCF1DED009231A9 /* BheaviorKitDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BDA0AE391BCF1DED009231A9 /* BheaviorKitDemoUITests.swift */,
+				BDA0AE3B1BCF1DED009231A9 /* Info.plist */,
+				BD2D7A0B1BCF7AAD00E61B8C /* PhotoPickerUITests.swift */,
+			);
+			path = BheaviorKitDemoUITests;
 			sourceTree = "<group>";
 		};
 		FCDC35D5DA0608D3CC4833E5 /* Frameworks */ = {
@@ -241,25 +218,23 @@
 			productReference = BD3429631B44E96300C28FA6 /* BheaviorKitDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BD77F4471B58D33C00C609CD /* UI Tests */ = {
+		BDA0AE361BCF1DED009231A9 /* BheaviorKitDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD77F4501B58D33C00C609CD /* Build configuration list for PBXNativeTarget "UI Tests" */;
+			buildConfigurationList = BDA0AE3E1BCF1DED009231A9 /* Build configuration list for PBXNativeTarget "BheaviorKitDemoUITests" */;
 			buildPhases = (
-				F9472079E5958F68DA85B6EE /* Check Pods Manifest.lock */,
-				BD77F4441B58D33C00C609CD /* Sources */,
-				BD77F4451B58D33C00C609CD /* Frameworks */,
-				BD77F4461B58D33C00C609CD /* Resources */,
-				68447B1DEACDB1CD4857D26B /* Copy Pods Resources */,
+				BDA0AE331BCF1DED009231A9 /* Sources */,
+				BDA0AE341BCF1DED009231A9 /* Frameworks */,
+				BDA0AE351BCF1DED009231A9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BD77F44F1B58D33C00C609CD /* PBXTargetDependency */,
+				BDA0AE3D1BCF1DED009231A9 /* PBXTargetDependency */,
 			);
-			name = "UI Tests";
-			productName = "UI Tests";
-			productReference = BD77F4481B58D33C00C609CD /* UI Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = BheaviorKitDemoUITests;
+			productName = BheaviorKitDemoUITests;
+			productReference = BDA0AE371BCF1DED009231A9 /* BheaviorKitDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -267,14 +242,15 @@
 		BD34295B1B44E96200C28FA6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = MadAppGang;
 				TargetAttributes = {
 					BD3429621B44E96200C28FA6 = {
 						CreatedOnToolsVersion = 6.4;
 					};
-					BD77F4471B58D33C00C609CD = {
-						CreatedOnToolsVersion = 6.4;
+					BDA0AE361BCF1DED009231A9 = {
+						CreatedOnToolsVersion = 7.0.1;
 						TestTargetID = BD3429621B44E96200C28FA6;
 					};
 				};
@@ -293,7 +269,7 @@
 			projectRoot = "";
 			targets = (
 				BD3429621B44E96200C28FA6 /* BheaviorKitDemo */,
-				BD77F4471B58D33C00C609CD /* UI Tests */,
+				BDA0AE361BCF1DED009231A9 /* BheaviorKitDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,7 +286,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD77F4461B58D33C00C609CD /* Resources */ = {
+		BDA0AE351BCF1DED009231A9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,39 +294,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		68447B1DEACDB1CD4857D26B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UI Tests/Pods-UI Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9472079E5958F68DA85B6EE /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD34295F1B44E96200C28FA6 /* Sources */ = {
@@ -373,23 +316,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD77F4441B58D33C00C609CD /* Sources */ = {
+		BDA0AE331BCF1DED009231A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD77F45D1B58E96800C609CD /* KIFUITestActor.swift in Sources */,
-				BD77F4581B58D77900C609CD /* XCTestCase.swift in Sources */,
-				BD77F45A1B58D79D00C609CD /* ImagePickerTests.swift in Sources */,
+				BD2D7A0C1BCF7AAD00E61B8C /* PhotoPickerUITests.swift in Sources */,
+				BDA0AE3A1BCF1DED009231A9 /* BheaviorKitDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BD77F44F1B58D33C00C609CD /* PBXTargetDependency */ = {
+		BDA0AE3D1BCF1DED009231A9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BD3429621B44E96200C28FA6 /* BheaviorKitDemo */;
-			targetProxy = BD77F44E1B58D33C00C609CD /* PBXContainerItemProxy */;
+			targetProxy = BDA0AE3C1BCF1DED009231A9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -443,6 +385,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -509,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BheaviorKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.madappgang.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -519,48 +463,35 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BheaviorKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.madappgang.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		BD77F4511B58D33C00C609CD /* Debug */ = {
+		BDA0AE3F1BCF1DED009231A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0348AD34322E735D9723E36E /* Pods-UI Tests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "UI Tests/Info.plist";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = BheaviorKitDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.madappgang.BheaviorKitDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "UI Tests/UI Tests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BheaviorKitDemo.app/BheaviorKitDemo";
+				TEST_TARGET_NAME = BheaviorKitDemo;
+				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
 		};
-		BD77F4521B58D33C00C609CD /* Release */ = {
+		BDA0AE401BCF1DED009231A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36A930E83E1B335AA8930F5D /* Pods-UI Tests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "UI Tests/Info.plist";
+				INFOPLIST_FILE = BheaviorKitDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.madappgang.BheaviorKitDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "UI Tests/UI Tests-Bridging-Header.h";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BheaviorKitDemo.app/BheaviorKitDemo";
+				TEST_TARGET_NAME = BheaviorKitDemo;
+				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -585,11 +516,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD77F4501B58D33C00C609CD /* Build configuration list for PBXNativeTarget "UI Tests" */ = {
+		BDA0AE3E1BCF1DED009231A9 /* Build configuration list for PBXNativeTarget "BheaviorKitDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD77F4511B58D33C00C609CD /* Debug */,
-				BD77F4521B58D33C00C609CD /* Release */,
+				BDA0AE3F1BCF1DED009231A9 /* Debug */,
+				BDA0AE401BCF1DED009231A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
