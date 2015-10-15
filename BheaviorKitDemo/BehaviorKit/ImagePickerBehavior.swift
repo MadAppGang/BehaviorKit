@@ -18,9 +18,9 @@ class ImagePickerBehavior: Behavior {
     /// Result image
     var image: UIImage? = nil
     
-    deinit {
-        println("\(self)")
-    }
+//    deinit {
+//        print("\(self)")
+//    }
     
     /// UIImagePickerControllerCameraCaptureMode
     /// false   = Photo
@@ -50,6 +50,20 @@ class ImagePickerBehavior: Behavior {
     ///
     @IBInspectable var sourceType: Int = 0
     
+    var imagePickerSourceType: UIImagePickerControllerSourceType {
+        get {
+            if let st  = UIImagePickerControllerSourceType(rawValue: sourceType) {
+                return st
+            } else {
+                return .PhotoLibrary
+            }
+        }
+        
+        set {
+            sourceType = newValue.rawValue
+        }
+    }
+    
     
     /// Video quality settings for movies recorded with the built-in camera, or transcoded by displaying in the image picker
     /// UIImagePickerControllerQualityType:
@@ -78,41 +92,50 @@ class ImagePickerBehavior: Behavior {
     /**
     Pick image or show action sheet to select image/video source
     */
-    @IBAction func pickImage(AnyObject) {
+    @IBAction func pickImage(_: AnyObject) {
         if askAboutSourceType == true {
-            let actionSheet = UIActionSheet(
-                title: nil,
-                delegate: self,
-                cancelButtonTitle: NSLocalizedString("MAGImagePickerBehaviour_CancelButtonTitle", comment: ""),
-                destructiveButtonTitle: nil,
-                otherButtonTitles:
-                NSLocalizedString("MAGImagePickerBehaviour_PhotoSourceButtonTitle", comment: ""),
-                NSLocalizedString("MAGImagePickerBehaviour_CameraSourceButtonTitle", comment: ""),
-                NSLocalizedString("MAGImagePickerBehaviour_SavedPhotosAlbumSourceButtonTitle", comment: "")
-            )
+            let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+            let cancelAction = UIAlertAction(title: NSLocalizedString("MAGImagePickerBehaviour_CancelButtonTitle", comment: ""), style: .Cancel) {
+                action in
+                //Do Nothing for cancel
+            }
+            let photoSourceAction = UIAlertAction(title: NSLocalizedString("MAGImagePickerBehaviour_PhotoSourceButtonTitle", comment: ""), style: .Default) {
+                action in
+                self.pickImageFromInternalSource(.PhotoLibrary)
+            }
+
+            let cameraSourceAction = UIAlertAction(title: NSLocalizedString("MAGImagePickerBehaviour_CameraSourceButtonTitle", comment: ""), style: .Default) {
+                action in
+                self.pickImageFromInternalSource(.Camera)
+            }
+
+            let savedPhototsSourceAction = UIAlertAction(title: NSLocalizedString("MAGImagePickerBehaviour_SavedPhotosAlbumSourceButtonTitle", comment: ""), style: .Default) {
+                action in
+                self.pickImageFromInternalSource(.SavedPhotosAlbum)
+            }
+            
+            actionSheet.addAction(cancelAction)
+            actionSheet.addAction(photoSourceAction)
+            actionSheet.addAction(cameraSourceAction)
+            actionSheet.addAction(savedPhototsSourceAction)
             
             if let vc = viewController {
-                actionSheet.showInView(vc.view)
+                vc.presentViewController(actionSheet, animated: true) {
+                    
+                }
             }
         } else {
-            pickImageFromInternalSource(sourceType)
+            pickImageFromInternalSource(imagePickerSourceType)
         }
     }
 }
 
 
-// MARK: - Action Sheet delegate
-extension ImagePickerBehavior: UIActionSheetDelegate {
-    func actionSheet(actionSheet: UIActionSheet, didDismissWithButtonIndex buttonIndex: Int) {
-        if buttonIndex != actionSheet.cancelButtonIndex {
-            pickImageFromInternalSource(buttonIndex-1)
-        }
-    }
-}
 
 // MARK: - Image Picker Controller delegate
 extension ImagePickerBehavior: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         image = info[UIImagePickerControllerEditedImage] as? UIImage
         if image == nil {
             image = info[UIImagePickerControllerOriginalImage] as? UIImage
@@ -127,6 +150,7 @@ extension ImagePickerBehavior: UIImagePickerControllerDelegate, UINavigationCont
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
+    
 }
 
 // MARK: - Private methods
@@ -142,14 +166,12 @@ extension ImagePickerBehavior {
         return nil
     }
     
-    func pickImageFromInternalSource(aSourceType: Int) {
-        var pickerController = UIImagePickerController()
-        if let st = UIImagePickerControllerSourceType(rawValue: aSourceType) {
-            if UIImagePickerController.isSourceTypeAvailable(st) {
-                pickerController.sourceType = st
-            } else {
-                pickerController.sourceType = .PhotoLibrary
-            }
+    func pickImageFromInternalSource(aSourceType: UIImagePickerControllerSourceType) {
+        let pickerController = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(aSourceType) {
+            pickerController.sourceType = aSourceType
+        } else {
+            pickerController.sourceType = .PhotoLibrary
         }
         
         if pickerController.sourceType == .Camera {
