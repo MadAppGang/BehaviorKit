@@ -63,6 +63,7 @@ class TextFieldValidatorBehavior: ValidatorBehavior {
     */
     @IBInspectable var hideKeyboardOnEnter: Bool = false
     
+
     /**
     *  If next text field connected, makes it first responder on "Enter" button press
     */
@@ -137,6 +138,7 @@ extension TextFieldValidatorBehavior: UITextFieldDelegate {
         } else if hideKeyboardOnEnter {
             textField.resignFirstResponder()
         }
+        self.sendActionsForControlEvents(.EditingDidEnd)
         return true
     }
     

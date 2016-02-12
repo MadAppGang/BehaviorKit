@@ -27,4 +27,8 @@ class TextFieldValidatorViewController: UIViewController {
         charsValidationResult.text = sender.isValid == true ? "Valid" : "Invalid"
     }
     
+    @IBAction func Imdone(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
 }

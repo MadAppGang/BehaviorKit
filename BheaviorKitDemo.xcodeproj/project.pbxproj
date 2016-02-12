@@ -11,7 +11,7 @@
 		BD0FC0CD1B6CC9E20088DD57 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0FC0CC1B6CC9E20088DD57 /* UIView.swift */; };
 		BD1CD48F1B4D6A94004B2050 /* ImagePickerBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1CD48E1B4D6A94004B2050 /* ImagePickerBehavior.swift */; };
 		BD1CD4941B4D809A004B2050 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD1CD4961B4D809A004B2050 /* Localizable.strings */; };
-		BD2D7A0C1BCF7AAD00E61B8C /* PhotoPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7A0B1BCF7AAD00E61B8C /* PhotoPickerUITests.swift */; settings = {ASSET_TAGS = (); }; };
+		BD2D7A0C1BCF7AAD00E61B8C /* PhotoPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7A0B1BCF7AAD00E61B8C /* PhotoPickerUITests.swift */; };
 		BD3429691B44E96300C28FA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3429681B44E96300C28FA6 /* AppDelegate.swift */; };
 		BD34296B1B44E96300C28FA6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD34296A1B44E96300C28FA6 /* MasterViewController.swift */; };
 		BD34296D1B44E96300C28FA6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD34296C1B44E96300C28FA6 /* DetailViewController.swift */; };
